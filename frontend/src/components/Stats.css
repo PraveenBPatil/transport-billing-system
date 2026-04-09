@@ -1,0 +1,11 @@
+.stats {
+  display: flex;
+  justify-content: space-around;
+  background: orange;
+  color: white;
+  padding: 20px;
+}
+
+.stat-box {
+  text-align: center;
+}

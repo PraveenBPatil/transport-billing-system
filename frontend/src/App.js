@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import About from "./components/About";
+import Stats from "./components/Stats";
 import BillingForm from "./components/BillingForm";
 import ResultCard from "./components/ResultCard";
 
@@ -6,11 +10,17 @@ function App() {
   const [result, setResult] = useState(null);
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Transport Billing System</h1>
-      <BillingForm setResult={setResult} />
-      <ResultCard result={result} />
-    </div>
+    <>
+      <Hero />
+      <Services />
+      <About />
+      <Stats />
+
+      <div style={{ padding: "40px" }}>
+        <BillingForm setResult={setResult} />
+        <ResultCard result={result} />
+      </div>
+    </>
   );
 }
 

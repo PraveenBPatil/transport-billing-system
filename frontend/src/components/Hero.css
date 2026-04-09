@@ -1,0 +1,28 @@
+.hero {
+  height: 60vh;
+  background: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 40px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.overlay h1 {
+  font-size: 2.5rem;
+}
+
+.overlay button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: orange;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
