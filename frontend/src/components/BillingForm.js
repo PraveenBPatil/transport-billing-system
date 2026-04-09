@@ -96,9 +96,10 @@ const BillingForm = ({ setResult }) => {
           onChange={handleChange}
         />
 
-        <button type="submit">
-          {loading ? "Calculating..." : "Calculate"}
-        </button>
+        <button type="submit" disabled={loading}>
+  {loading ? "⏳ Calculating..." : "🚀 Calculate"}
+</button>
+
       </form>
     </div>
   );

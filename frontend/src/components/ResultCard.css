@@ -1,0 +1,40 @@
+.result-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.result-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.box {
+  background: #f5f7fa;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.box h3 {
+  margin-top: 5px;
+}
+
+.profit {
+  background: #e6ffed;
+  color: green;
+}
+
+.loss {
+  background: #ffe6e6;
+  color: red;
+}

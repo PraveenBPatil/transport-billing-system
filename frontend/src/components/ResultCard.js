@@ -1,16 +1,38 @@
 import React from "react";
+import "./ResultCard.css";
 
 const ResultCard = ({ result }) => {
   if (!result) return null;
 
-  return (
-    <div>
-      <h2>📊 Result</h2>
+  const isProfit = result.profit >= 0;
 
-      <p><strong>Total Amount:</strong> ₹ {result.total_amount}</p>
-      <p><strong>Vendor Cost:</strong> ₹ {result.vendor_cost}</p>
-      <p><strong>Driver Cost:</strong> ₹ {result.driver_cost}</p>
-      <p><strong>Profit:</strong> ₹ {result.profit}</p>
+  return (
+    <div className="result-container">
+      <h2>📊 Billing Result</h2>
+
+      <div className="result-grid">
+
+        <div className="box">
+          <p>Total Amount</p>
+          <h3>₹ {result.total_amount}</h3>
+        </div>
+
+        <div className="box">
+          <p>Vendor Cost</p>
+          <h3>₹ {result.vendor_cost}</h3>
+        </div>
+
+        <div className="box">
+          <p>Driver Cost</p>
+          <h3>₹ {result.driver_cost}</h3>
+        </div>
+
+        <div className={`box ${isProfit ? "profit" : "loss"}`}>
+          <p>{isProfit ? "Profit" : "Loss"}</p>
+          <h3>₹ {result.profit}</h3>
+        </div>
+
+      </div>
     </div>
   );
 };
