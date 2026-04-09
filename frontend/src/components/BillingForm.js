@@ -4,10 +4,10 @@ import { calculateBill } from "../services/api";
 const BillingForm = ({ setResult }) => {
   const [formData, setFormData] = useState({
     model: "flat",
-    trips: 0,
-    client_rate: 0,
-    vendor_rate: 0,
-    driver_rate: 0
+    trips: "",
+    client_rate: "",
+    vendor_rate: "",
+    driver_rate: ""
   });
 
   const handleChange = (e) => {
@@ -19,7 +19,18 @@ const BillingForm = ({ setResult }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await calculateBill(formData);
+
+    const data = {
+      ...formData,
+      trips: Number(formData.trips),
+      client_rate: Number(formData.client_rate),
+      vendor_rate: Number(formData.vendor_rate),
+      driver_rate: Number(formData.driver_rate)
+    };
+
+    const result = await calculateBill(data);
+    console.log("Result:", result);  // 🔥 IMPORTANT
+
     setResult(result);
   };
 
