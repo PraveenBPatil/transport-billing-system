@@ -1,20 +1,14 @@
-function ResultCard({ result }) {
+import React from "react";
+
+const ResultCard = ({ result }) => {
   if (!result) return null;
 
   return (
-    <div style={{
-      marginTop: "20px",
-      padding: "15px",
-      background: "#f1f3f5",
-      borderRadius: "8px"
-    }}>
-      <h3>Result</h3>
-      <p>Client: ₹{result.client_amount}</p>
-      <p>Vendor: ₹{result.vendor_amount}</p>
-      <p>Driver: ₹{result.driver_amount}</p>
-      <p><strong>Margin: ₹{result.margin}</strong></p>
+    <div>
+      <h2>Result</h2>
+      <pre>{JSON.stringify(result, null, 2)}</pre>
     </div>
   );
-}
+};
 
 export default ResultCard;

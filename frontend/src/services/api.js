@@ -1,7 +1,4 @@
-// 🔹 Change this URL when deploying
-const BASE_URL = "http://127.0.0.1:8000";   // local backend
-
-// const BASE_URL = "https://your-backend.onrender.com";  // 👉 use this after deployment
+const BASE_URL = "https://praveenpatil7799.pythonanywhere.com";
 
 export const calculateBill = async (data) => {
   try {
@@ -13,14 +10,11 @@ export const calculateBill = async (data) => {
       body: JSON.stringify(data)
     });
 
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    return await res.json();
+    const result = await res.json();
+    return result;
 
   } catch (error) {
     console.error("API Error:", error);
-    return { error: "Something went wrong" };
+    return { error: "Failed to connect to backend" };
   }
 };
