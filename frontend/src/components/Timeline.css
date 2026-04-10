@@ -1,0 +1,49 @@
+.timeline-container {
+  position: relative;
+  padding: 60px 20px;
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: orange;
+  transform: translateX(-50%);
+}
+
+/* 🚗 Moving car */
+.car {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  animation: moveCar 6s linear infinite;
+}
+
+/* Animation */
+@keyframes moveCar {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* Boxes */
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.timeline-box {
+  width: 250px;
+  padding: 15px;
+  background: #f5f7fa;
+  border-radius: 10px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}

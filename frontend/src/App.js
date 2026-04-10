@@ -5,6 +5,9 @@ import About from "./components/About";
 import Stats from "./components/Stats";
 import BillingForm from "./components/BillingForm";
 import ResultCard from "./components/ResultCard";
+import Timeline from "./components/Timeline";
+import ScrollTimeline from "./components/ScrollTimeline";
+import PremiumTimeline from "./components/PremiumTimeline";
 
 function App() {
   const [result, setResult] = useState(null);
@@ -15,6 +18,8 @@ function App() {
       <Services />
       <About />
       <Stats />
+      <PremiumTimeline />
+      <ScrollTimeline />
 
       <div style={{ padding: "40px" }}>
         <BillingForm setResult={setResult} />

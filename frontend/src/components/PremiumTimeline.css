@@ -1,0 +1,36 @@
+.premium-wrapper {
+  position: relative;
+  padding: 120px 0;
+  min-height: 1800px;
+}
+
+/* Line */
+.premium-line {
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, orange, #ffcc80);
+  transform: translateX(-50%);
+}
+
+/* 🚗 Car */
+.premium-car {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  z-index: 10;
+}
+
+/* Cards */
+.premium-card {
+  position: relative;
+  width: 260px;
+  padding: 18px;
+  background: white;
+  border-radius: 12px;
+  margin: 40px 0;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  font-weight: 500;
+}

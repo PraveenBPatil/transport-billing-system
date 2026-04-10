@@ -1,0 +1,45 @@
+.timeline-wrapper {
+  position: relative;
+  padding: 100px 0;
+  min-height: 1500px;
+}
+
+/* vertical line */
+.line {
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: orange;
+  transform: translateX(-50%);
+}
+
+/* 🚗 car + driver */
+.car {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  z-index: 10;
+  transition: top 0.2s ease-out;
+}
+
+/* cards */
+.timeline-card {
+  position: relative;
+  width: 250px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  margin: 40px 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* animation show */
+.timeline-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
